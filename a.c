@@ -1,7 +1,7 @@
 #include<stdio.h>
 int main(void)
 {
-    char c = 128;
+    char c = 130;
     int a;
 
     a = c;
@@ -14,6 +14,6 @@ int main(void)
         printf("world\n");
 
     }
-    
-        return 0;
+        return 0;        
+        
 }
