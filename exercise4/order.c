@@ -105,8 +105,31 @@ void sort_array(int *p, int n)
     int j = 0;
     int temp;
 
-
 #if 1
+   int k = 0;
+   
+    for (i = 0; i < n -1; i++)
+    {
+        k = i;
+        for (j = i + 1; j < n; j++)
+        {
+            if (p[k] > p[j])
+            {
+                k = j;
+            }
+        }
+        if (i != k)
+        {
+                temp = p[i];
+                p[i] = p[k];
+                p[k] = temp;
+            
+        }
+    }
+    
+#endif
+
+#if 0
     for (i = 0; i < n - 1; i++) 
     {
         for (j = i+1; j < n; j++) 
