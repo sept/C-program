@@ -1,3 +1,4 @@
+/*采用对折法快速排序*/
 #include<stdio.h>
 #include <stdlib.h>
 #include <time.h>
@@ -30,13 +31,13 @@ void init_array(int *p, int n)
 }
 
 void qucik_sort(int *p, int x, int y)
-    int i = x;
+{    int i = x;
     int j = y;
     int mid = p[(i+j)/2];   //  不能写成 (p[i]+p[j])/2
     int temp = 0;
 
-do
-{
+   do
+  {
     while((p[i]<mid) && (i < y)) i++;
     while((p[j]>mid) && (j > x)) j--;
     if (i <=j)
@@ -46,15 +47,17 @@ do
         p[j] = temp;
         i++;
         j--;
-    } while(i <=j);
+     }   
+   } while(i <=j);
     if (x < j)
     {
         qucik_sort(p , x, j);
     }
-    if (j < y)
+    if (i < y)
     {
         qucik_sort(p , i, y);
     }
+ 
 }
 
 
