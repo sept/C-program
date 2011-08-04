@@ -1,3 +1,4 @@
+/*使用数组和指针 打印出26个字母*/
 #include <stdio.h>
 
 int main(int argc, const char *argv[])
