@@ -1,3 +1,4 @@
+/*调用库函数举例*/
 #include <stdio.h>
 #include <string.h>               //调用库函数
 #define N 30
