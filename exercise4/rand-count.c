@@ -1,4 +1,4 @@
-#if 0
+#if 0                                      //输出0到99 之间出现9 的个数
 #include<stdio.h>
 int main(int argc, const char *argv[])
 {
@@ -23,7 +23,8 @@ int main(int argc, const char *argv[])
 }
 #endif 
 
-
+/*初始化一组随机数 将重复的数字只输出一次*/
+/*先将重复的数标记为-1 后将输出为-1的数删除或不输出*/
 #include<stdio.h>
 #include <stdlib.h>
 #include <time.h>
