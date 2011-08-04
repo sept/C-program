@@ -1,4 +1,5 @@
-#if 0
+/*使用冒泡法排序*/
+#if 1
 #include <stdio.h>
 void main()
 {
@@ -35,7 +36,8 @@ void main()
  }
 #endif
 
-#if 0 
+/*使用冒泡法排序*/
+#if 1 
 #include<stdio.h>
 int main(int argc, const char *argv[])
 {
@@ -67,7 +69,7 @@ int main(int argc, const char *argv[])
 }
 #endif
 
-
+/*排序*/
 #include<stdio.h>
 #include <stdlib.h>
 #include <time.h>
@@ -88,7 +90,7 @@ void print_array(int *p, int n)
     printf("\n");
 }
 
-void init_array(int *p, int n)
+void init_array(int *p, int n)            //初始化
 {
     srand(time(NULL));
 
@@ -108,19 +110,19 @@ void sort_array(int *p, int n)
 #if 1
    int k = 0;
    
-    for (i = 0; i < n -1; i++)
+    for (i = 0; i < n -1; i++)           //大循环使用 0到n-1,即最后一个不用再排
     {
-        k = i;
-        for (j = i + 1; j < n; j++)
+        k = i;             //使用中间变量 k 
+        for (j = i + 1; j < n; j++)      
         {
-            if (p[k] > p[j])
+            if (p[k] > p[j])        
             {
-                k = j;
+                k = j;       //当遇到比 j 大的数时用 k 做标记 扫描所有的数据一遍结束
             }
         }
-        if (i != k)
+        if (i != k)          //若扫描一遍后 最大的数不是他本身 则交换一次  （这样就减少交换次数从而提高效率）
         {
-                temp = p[i];
+                temp = p[i]; 
                 p[i] = p[k];
                 p[k] = temp;
             
@@ -129,7 +131,7 @@ void sort_array(int *p, int n)
     
 #endif
 
-#if 0
+#if 0                                   //或使用原始方法 与每个比之大的数都交换 从而先找出最大的数
     for (i = 0; i < n - 1; i++) 
     {
         for (j = i+1; j < n; j++) 
