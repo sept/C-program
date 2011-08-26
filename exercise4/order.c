@@ -37,7 +37,7 @@ void main()
 #endif
 
 /*使用冒泡法排序*/
-#if 1 
+#if 0 
 #include<stdio.h>
 int main(int argc, const char *argv[])
 {
@@ -68,7 +68,7 @@ int main(int argc, const char *argv[])
     return 0;
 }
 #endif
-
+#if 0
 /*排序*/
 #include<stdio.h>
 #include <stdlib.h>
@@ -159,4 +159,4 @@ int main(int argc, const char *argv[])
         print_array(array, M);
         return 0;
 }
-
+#endif
